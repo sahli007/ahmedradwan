@@ -1,52 +1,65 @@
 (function() {
 
-var flag = true;  
-$(window).scroll(function() {
-  height = $(window).height();
-  if($(window).scrollTop() > 0.7*height){
-    $('#CS-div hr').addClass('spreadOutLine');
-    $('#imgs-wrapper').addClass('fadeInDown animated displayON');
-    $('#about-me-h1').addClass('fadeInDown animated displayON');
-    $('#about-me-p').addClass('fadeInUp animated displayON');
+  var scrollTimer = null;
+  $(window).scroll(function () {
+    if (scrollTimer) {
+        clearTimeout(scrollTimer);   // clear any previous pending timer
+      }
+    scrollTimer = setTimeout(handleScroll, 20);   // set new timer
+  })
 
-  }
-  if($(window).scrollTop() > 1.7*height){
-    $('.life-section i').addClass('fadeInDown animated displayON');
-    $('#mylife-div h2').addClass('fadeInDown animated displayON');
-    $('#mylife-div p').addClass('fadeInUp animated displayON');
 
-  }
+  var flag = true;
+  var flag2 = true;
 
-  if($(window).scrollTop() > 2.7 *height){
-    $('#unknownCenter').addClass('displayON');
-    $('.fa-star').addClass('fadeInRight animated displayON');
-    $('#skills-list a').addClass('fadeInLeft animated displayON');
-    $('#skills-list i').addClass('fadeInRight animated displayON');
-    $('#unknownCenter h1, #unknownCenter h2, #unknownCenter h3').addClass('fadeInDown animated displayON');
-    $('#skills-list hr').addClass('spreadOutLine displayON');
-
-  }
-
-  if($(window).scrollTop() > 3.7 *height){
-    $('#travel-box h2').addClass('fadeInLeft animated displayON');
-    $('#photo-box h2').addClass('fadeInRight animated displayON');
-    if(flag) {
-      $('#travel-box').slideme('play');
-      console.log("done");
-      flag=false;
+  function handleScroll() {
+    height = $(window).height();
+    if($(window).scrollTop() > 0.5*height)  {
+      $('#CS-div hr').addClass('spreadOutLine');
+      $('#CS-div img').addClass('fadeInDown animated displayON').removeClass('displayOFF');
+      $('#about-me-h1').addClass('fadeInDown animated displayON').removeClass('displayOFF');
+      $('#about-me-p').addClass('fadeInUp animated displayON').removeClass('displayOFF');
     }
-  }
 
+    if($(window).scrollTop() > 1.5*height)  {
+      $('.life-section i').addClass('fadeInDown animated displayON').removeClass('displayOFF');
+      $('#toggler a, #toggler').addClass('fadeInDown displayON').removeClass('displayOFF');
+      $('#mylife-div h2').addClass('fadeInDown animated displayON').removeClass('displayOFF');
+      $('#work, #sections-wrapper').addClass('fadeInDown animated displayON').removeClass('displayOFF');
+      if (flag2)
+      {
+        $('#workLine').css('width','85%');
+        flag2 = false;
+      }
 
-  if($(window).scrollTop() > 4.7 *height){
-    $('#map').addClass('fadeIndown animated displayON');
-  }
+    }
 
-  if($(window).scrollTop() > 6 *height){
-    $('#waterfall-box h2').addClass('fadeIndown animated displayON');
-  }
+    if($(window).scrollTop() > 2.5 *height) {
+      $('#unknownCenter').addClass('displayON').removeClass('displayOFF');
+      $('.fa-star').addClass('fadeInRight animated displayON').removeClass('dsiplayOFF');
+      $('#skills-list a, #skills-list i').addClass('fadeInLeft animated displayON').removeClass('displayOFF');
+      $('#unknownCenter h1, #unknownCenter h2, #unknownCenter h3').addClass('fadeInDown animated displayON').removeClass('displayOFF');
+      $('#skills-list hr').addClass('spreadOutLine displayON').removeClass('displayOFF');
 
+    }
 
-});
+    if($(window).scrollTop() > 3.5 *height) {
+      $('#travel-box h2').addClass('fadeInLeft animated displayON').removeClass('displayOFF');
+      $('#photo-box h2').addClass('fadeInRight animated displayON').removeClass('displayOFF');
+      if(flag) {
+        $('#travel-box').slideme('play');
+        flag=false;
+      }
+    }
+
+    if($(window).scrollTop() > 4.5 *height) {
+      $('#map, #map h2').addClass('fadeIndown animated displayON').removeClass('displayOFF');
+    }
+
+    if($(window).scrollTop() > 5.5 *height) {
+      $('#waterfall-box h2').addClass('fadeIndown animated displayON').removeClass('displayOFF');
+    }
+
+  };
 
 })();
