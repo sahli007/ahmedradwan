@@ -10,7 +10,6 @@
 
     $('#test').one('webkitAnimationEnd oanimationend msAnimationEnd animationend',   
       function(e) {
-        console.log('test');
         removePreloading();
       });
 

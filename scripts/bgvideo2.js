@@ -67,7 +67,6 @@
 
     var originalOnPlayerReady = onPlayerReady;
     onPlayerReady = function(event) {
-      console.log('here1');
       originalOnPlayerReady(event);
       if (muted) {
         event.target.mute();
@@ -76,7 +75,6 @@
 
     var originalOnPlayerStateChange = onChangedState;
     onChangedState = function(event) {
-      console.log('here2');
       originalOnPlayerStateChange(event);
       event.target.mute();
       if (event.data == YT.PlayerState.PLAYING) {
@@ -87,7 +85,6 @@
 
     var originalYouTubeReady = onYouTubeIframeAPIReady;
     onYouTubeIframeAPIReady = function() {
-      console.log('here3');
       originalYouTubeReady();
       player = new YT.Player(framedVideoDivID, {
         loop: '1',
