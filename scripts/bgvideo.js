@@ -82,9 +82,15 @@ function resizeVideo() {
           'onStateChange': onPlayerStateChange
         }
       });
+      if (muted == 1) {
+        player.mute();
+      }
     };
 
     function onPlayerStateChange(event) {
+      if (muted == 1) {
+        player.mute();
+      }
       if (event.data == YT.PlayerState.PLAYING) {
         document.getElementById(framedVideoDivID).style.visibility = 'visible';
       } else if (event.data == YT.PlayerState.ENDED) {
@@ -95,7 +101,7 @@ function resizeVideo() {
     function onPlayerReady(event) {
       player.setLoop(true);
       if (muted == 1) {
-        event.target.mute();
+        player.mute();
       }
     };
 
