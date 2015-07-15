@@ -9,14 +9,14 @@ body  {
 }
 
 .clearfix {
-  clear: both; 
+  clear: both;
   float:left;
 }
 
 .clearfix:after {
   content: "";
-  display: table; 
-  clear: both; 
+  display: table;
+  clear: both;
 }
 
 #all {display: none;}
@@ -42,34 +42,34 @@ body  {
   color: rgb(180,180,180);
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3 {
-  font-family: Lato; 
-  color: rgb(120,120,120); 
-  font-weight: 300; 
+  font-family: Lato;
+  color: rgb(120,120,120);
+  font-weight: 300;
   letter-spacing:2px;
   text-align: center;
+  line-height: 1.4;
 }
 
 h1 {font-size: 32px;}
 h2 {font-size: 28px;}
 h3 {font-size: 24px;}
 
-p, 
-a, 
+p,
+a,
 strong {
-  font-family: Lato; 
-  color: rgb(160,160,160); 
-  font-weight: 300; 
-  letter-spacing: 0.8px; 
-  font-size: 18px; 
+  font-family: Lato;
+  color: rgb(160,160,160);
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  font-size: 18px;
   line-height: 1.5;
 }
 
 a, a:hover, a:focus {
-  text-decoration: none; 
-  color:inherit;
+  text-decoration: none;
 }
 
 .center-text {
@@ -82,13 +82,16 @@ a, a:hover, a:focus {
   margin-bottom: 30px;
 }
 
-ul {list-style-type: none;}
+ul {
+  list-style-type: none;
+  padding: 0 20px;
+}
 
 .fa-bars {
-  font-size: 48px; 
-  color:rgba(50, 199, 255, 1); 
-  position:absolute; 
-  top:70px; 
+  font-size: 48px;
+  color:rgba(50, 199, 255, 1);
+  position:absolute;
+  top:70px;
   left:15%;
 }
 
@@ -101,24 +104,24 @@ ul {list-style-type: none;}
 }
 
 hr {
- color: rgba(50, 199, 255, 1); 
- border:1px; 
+ color: rgba(50, 199, 255, 1);
+ border:1px;
  border-style: solid none none none;
 }
 
 /*countering bootstrap effect*/
-.row {margin-right: 0; margin-left: 0;} 
+.row {margin-right: 0; margin-left: 0;}
 
 
 /* This is for the 'load more' button of the instagram plugin*/
-.btn {display: none !important;} 
+.btn {display: none !important;}
 
 .fa-star {
   color: rgba(50, 199, 255, 1);
 }
 
-/*=========================================== 
-MENU CONTROL 
+/*===========================================
+MENU CONTROL
 ========================================*/
 
 .menu-clicked {
@@ -139,8 +142,8 @@ MENU CONTROL
   -moz-filter: grayscale(0);
 }
 
-/*========================================== 
-HEADLINE 
+/*==========================================
+HEADLINE
 ========================================= */
 
 #home-section {
@@ -170,7 +173,7 @@ HEADLINE
 }
 
 #menu-list a {
-  font-size: 24px; 
+  font-size: 24px;
   letter-spacing: 2px;
   font-weight: 300;
   color:rgb(147, 147, 147);
@@ -179,9 +182,9 @@ HEADLINE
 #menu-list li {margin-top:10%;}
 
 #menu-list hr {
-  border:1px; 
-  border-style: solid none none none; 
-  color:rgba(50, 199, 255, 1); 
+  border:1px;
+  border-style: solid none none none;
+  color:rgba(50, 199, 255, 1);
   width:60%;
 }
 
@@ -197,30 +200,34 @@ HEADLINE
 }
 
 #headline h2 {
-  font-size: 21px;
+  font-size: 20px;
   color: white;
   letter-spacing: 1px;
 }
 
 .social {
-  padding: 20px; 
-  margin:0; 
-  text-align: center; 
-  opacity:0; 
-  right:0; 
+  padding: 20px;
+  margin:0;
+  text-align: center;
+  opacity:0;
+  right:0;
   left:0;
   -webkit-animation: fadeInUp 3s 1s forwards;
   animation: fadeInUp 3s 1s forwards;
 }
 
-.social li{ 
- display:inline-block; 
+.social img {
+  width: 80px;
+}
+
+.social li{
+ display:inline-block;
  transition: background-color 0.5s;
 }
 
 #social {
-  position:absolute; 
-  bottom: 20px; 
+  position:absolute;
+  bottom: 20px;
 }
 
 #social li:hover {
@@ -239,8 +246,8 @@ HEADLINE
   -o-animation: fadeInDown 3s 1s forwards;
 }
 
-/*============================================ 
-ABOUT ME 
+/*============================================
+ABOUT ME
 =========================================== */
 
 #CS-div img {
@@ -277,7 +284,7 @@ MY LIFE
   justify-content: space-between;
   -webkit-justify-content: space-between;
   height: 20%;
-  width: 650px;
+  max-width: 650px;
   margin:auto;
 }
 
@@ -308,12 +315,12 @@ MY LIFE
   margin:auto;
 }
 
-/*=================================================== 
-Abilities 
+/*===================================================
+Abilities
 ====================================================*/
 
 
-#abs-half-2 { 
+#abs-half-2 {
   background-image: url('img/lava-4.png');
   display:inline-block;
   width:30%%;
@@ -356,12 +363,12 @@ Abilities
 
 #abs-half-1 h1 {
   margin-top:40px;
-  margin-bottom:30px; 
+  margin-bottom:30px;
 }
 
 
-/*============================================== 
-Travel 
+/*==============================================
+Travel
 ===============================================*/
 
 
@@ -411,8 +418,8 @@ Travel
 }
 
 
-/*============================================= 
-waterfall 
+/*=============================================
+waterfall
 ===============================================*/
 
 #waterfall-div {
@@ -444,7 +451,7 @@ waterfall
 
 
 /* =================================
-Map 
+Map
 =================================== */
 
 #map {
@@ -463,7 +470,7 @@ a.mapbox-improve-map {display: none;}
 
 #insta h1 {margin: 50px 0 40px 0;}
 
-/* ===================== 
+/* =====================
 Contact
 ======================== */
 
@@ -477,15 +484,16 @@ Contact
   padding: 30px;
 }
 
-/* ===================== 
-Media Queries 
+/* =====================
+Media Queries
 ======================== */
 
 @media (max-width: 480px){
 
-	#headline h1 {font-size: 36px;}
-	#headline h2 {font-size: 18px;}
-
+  h1 {font-size: 28px;}
+  #headline h1 {font-size: 36px;}
+	h2 {font-size: 18px;}
+  a, p, strong {font-size: 16px;}
 
 }
 
@@ -496,8 +504,3 @@ Media Queries
   #abs-half-1 {width: 100%;}
 
 }
-
-
-
-
-
