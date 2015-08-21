@@ -8,7 +8,7 @@
 
     $('.life-section').addClass('fadeOutRight').removeClass('fadeInLeft fadeInUp');
     $(textId).addClass('fadeInLeft displayON').removeClass('displayOFF fadeOutRight');
-    
+
   })
 
 })();

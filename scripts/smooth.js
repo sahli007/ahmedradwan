@@ -7,4 +7,3 @@ $('a[href^="#"]').bind('click.smoothscroll',function (e) {
 			window.location.hash = target;
 		});
 });
-
