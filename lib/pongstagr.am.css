@@ -471,7 +471,7 @@ fieldset[disabled] .media-column > .btn:hover.active {
           transition: transform 100ms linear;
 }
 
-.scaling:hover {
+/*.scaling:hover {
   position: relative;
   z-index: 2;
   -webkit-transform: scale(1.2);
@@ -481,7 +481,7 @@ fieldset[disabled] .media-column > .btn:hover.active {
           box-shadow: 0 2px 14px rgba(66, 66, 66, 0.2);
   -webkit-transition: transform 100ms linear;
           transition: transform 100ms linear;
-}
+}*/
 
 .thumbnail > a:not(.btn) {
   display: block;
