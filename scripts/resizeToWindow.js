@@ -1,9 +1,9 @@
 $(document).ready(function(){resizeDiv();});
-            
+
 window.onresize = function(event) {
               resizeDiv();
-            }
-              
+            };
+
 function resizeDiv() {
   vpw = $(window).width();
   vph = $(window).height();
@@ -14,5 +14,5 @@ function resizeDiv() {
   $('.halfWrapper').css({'min-height':vph+'px'});
   $('.wrapperHalf').css({'min-height':(vph/2)+'px'});
   $('.tableWrapper').css({'height':vph+'px'});
-  $('.slider li img').css({'height':vph+'px'})   
+  // $('.slider li img').css({'height':vph+'px'}); 
 }

@@ -484,6 +484,11 @@ Contact
   padding: 30px;
 }
 
+.slideme img {
+  height: 100%;
+  width: auto;
+}
+
 /* =====================
 Media Queries
 ======================== */
