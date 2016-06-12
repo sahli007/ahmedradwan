@@ -1,0 +1,29 @@
+{
+  "name": "ahmedradwan",
+  "homepage": "http://www.aradwan.me",
+  "authors": [
+    "Ahmed Radwan <ahmed@unbounce.com>"
+  ],
+  "description": "Personal Website",
+  "main": "index.html",
+  "keywords": [
+    "Personal",
+    "website",
+    "profile",
+    "portfolio"
+  ],
+  "license": "UNKNOWN",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.0.0",
+    "instafeed.js": "^1.4.1",
+    "font-awesome": "^4.6.3"
+  }
+}
