@@ -7,15 +7,14 @@
   <link rel="Stylesheet" type="text/css" href="normalize.css">
 
   <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700|Cabin:400,700|PT+Sans:400,700|Josefin+Sans:400,700' rel='stylesheet' type='text/css'>
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
 
   <link rel="Stylesheet" type="text/css" href="lib/animate.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link rel="Stylesheet" type="text/css" href="lib/pongstagr.am.css">
+  <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="Stylesheet" type="text/css" href="bower_components/pongstagr.am/source-min/pongstagr.am.min.css">
   <link rel="Stylesheet" type="text/css" href="preload.css">
   <link rel="Stylesheet" type="text/css" href="style.css">
-  <link rel="Stylesheet" type="text.css" href="lib/slideme.css">
-  <script src="scripts/disable_enable_scrolling.js"></script>
+  <link rel="Stylesheet" type="text/css" href="lib/slideme.css">
 </head>
 <body>
   <!--  ==================================== PRE LOADER ==================================================  -->
@@ -476,7 +475,7 @@
             <div id="waterfall-wrapper">
 
               <div id="waterfall-box" class="flex-center-wrapper">
-                <h2 class="displayOFF">
+                <h2>
                   OCCASIONALLY I CHASE AFTER WATERFALLS
                 </h2>
               </div>
@@ -522,20 +521,27 @@
 
         <!-- =================================================== Scripts ===================================================== -->
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script src="lib/jquery.stellar.min.js"></script>
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/jquery.stellar/jquery.stellar.min.js"></script>
         <script src="lib/jquery.slideme2.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-        <script src="lib/pongstagr.am.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/pongstagr.am/source-min/pongstagr.am.min.js"></script>
         <script>
         $(document).ready(function() {
-          $('#travel-box').slideme();
+          var slidemeOptions = {
+            'autoslide': true,
+            'loop': true,
+            'interval': 3000,
+            'speed': 1500
+          };
+          $('#travel-box').slideme(slidemeOptions);
           $('#travel-box').slideme('stop');
         })
         </script>
         <script src="scripts/stellarinit.js"></script>
         <script src="scripts/resizeToWindow.js"></script>
         <script src="scripts/animationOnScroll.js"></script>
+        <script src="scripts/disable_enable_scrolling.js"></script>
         <script src="scripts/menuControl.js"></script>
         <script src="scripts/smooth.js"></script>
 
@@ -549,10 +555,7 @@
 
         <script> $('#instagram-div').pongstgrm({
           accessId:     '242552356',
-          accessToken:  '242552356.ba4462e.891b8530145c4484a92be450e0dd84ec',
-          picture_size: '64',
-          show: 'recent'
-
+          accessToken:  '242552356.ba4462e.891b8530145c4484a92be450e0dd84ec'
         });
         </script>
 
