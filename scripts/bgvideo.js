@@ -90,7 +90,7 @@ if(!isMobile.any()) {
     if (muted) {
       player.mute();
     }
-  };
+  }
 
   function onPlayerStateChange(event) {
     if (muted) {
@@ -101,12 +101,12 @@ if(!isMobile.any()) {
     } else if (event.data == YT.PlayerState.ENDED) {
       document.getElementById(framedVideoDivID).style.visibility = 'hidden';
     }
-  };
+  }
 
   function onPlayerReady(event) {
     player.setLoop(true);
     if (muted) {
       player.mute();
     }
-  };
+  }
 }
