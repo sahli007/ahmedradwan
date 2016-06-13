@@ -24,6 +24,12 @@
   "dependencies": {
     "jquery": "^3.0.0",
     "instafeed.js": "^1.4.1",
-    "font-awesome": "^4.6.3"
+    "font-awesome": "^4.6.3",
+    "animate.css": "^3.5.2",
+    "letteringjs": "^0.7.0",
+    "textillate": "^0.4.0",
+    "jquery.stellar": "^0.6.2",
+    "pongstagr.am": "^3.0.4",
+    "bootstrap": "^3.3.6"
   }
 }
