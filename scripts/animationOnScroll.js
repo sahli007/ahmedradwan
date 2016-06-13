@@ -5,8 +5,8 @@
     if (scrollTimer) {
         clearTimeout(scrollTimer);   // clear any previous pending timer
       }
-    scrollTimer = setTimeout(handleScroll, 50);   // set new timer
-  })
+    scrollTimer = setTimeout(handleScroll, 30);   // set new timer
+  });
 
 
   var flag = true;
@@ -16,13 +16,12 @@
     'second':true,
     'third':true,
     'fourth': true,
-    'fifth': true,
-    'sixth':true,
-  }
+    'fifth': true
+  };
 
   function handleScroll() {
 
-    var scrollPosition = $(window).scrollTop()
+    var scrollPosition = $(window).scrollTop();
     var height = $(window).height();
     if(scrollPosition > 0.5*height && sectionFlags.first)  {
       $('#CS-div hr').addClass('spreadOutLine');
@@ -32,7 +31,7 @@
       return;
     }
 
-    if(scrollPosition > 1.3*height && sectionFlags.second)  {
+    if(scrollPosition > 1.2*height && sectionFlags.second)  {
       $('.life-section i').addClass('fadeInDown animated displayON').removeClass('displayOFF');
       $('#toggler a, #toggler, #mylife-div h2').addClass('fadeInDown animated displayON').removeClass('displayOFF');
       $('#work, #sections-wrapper').addClass('fadeInUp animated displayON').removeClass('displayOFF');
@@ -45,7 +44,7 @@
       return;
     }
 
-    if(scrollPosition > 2.3 *height && sectionFlags.third) {
+    if(scrollPosition > 2.2 *height && sectionFlags.third) {
       $('#skills-list-wrapper').addClass('displayON').removeClass('displayOFF');
       $('.fa-star').addClass('fadeInRight animated');
       $('#skills-list a, #skills-list i').addClass('fadeInLeft animated');
@@ -55,7 +54,7 @@
       return;
     }
 
-    if(scrollPosition > 3.3 *height && sectionFlags.fourth) {
+    if(scrollPosition > 3.2 *height && sectionFlags.fourth) {
       $('#travel-box h2').addClass('fadeInLeft animated displayON').removeClass('displayOFF');
       $('#photo-box h2').addClass('fadeInRight animated displayON').removeClass('displayOFF');
       if(flag) {
@@ -66,18 +65,12 @@
       return;
     }
 
-    if(scrollPosition > 4.3 *height && sectionFlags.fifth) {
+    if(scrollPosition > 4.2 *height && sectionFlags.fifth) {
       $('#map, #map h2').addClass('fadeIndown animated displayON').removeClass('displayOFF');
-      sectionFlags.fifth = false
+      sectionFlags.fifth = false;
       return;
     }
 
-    if(scrollPosition > 5.3 *height && sectionFlags.sixth) {
-      $('#waterfall-box h2').addClass('fadeIndown animated displayON').removeClass('displayOFF');
-      sectionFlags.sixth = false;
-      return;
-    }
-
-  };
+  }
 
 })();
