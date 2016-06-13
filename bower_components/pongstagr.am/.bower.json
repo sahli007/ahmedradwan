@@ -1,0 +1,15 @@
+{
+  "name": "pongstagr.am",
+  "homepage": "https://github.com/pongstr/pongstagr.am",
+  "version": "3.0.4",
+  "_release": "3.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.4",
+    "commit": "fcb932e5c0dd60d3a92c2d47f8c93ce32b9d17f1"
+  },
+  "_source": "https://github.com/pongstr/pongstagr.am.git",
+  "_target": "^3.0.4",
+  "_originalSource": "pongstagr.am",
+  "_direct": true
+}
